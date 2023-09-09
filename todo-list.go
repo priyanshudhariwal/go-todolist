@@ -25,7 +25,7 @@ func main() {
 	case 3:
 		del()
 	case 4:
-		Exit
+		//
 	default:
 		fmt.Println("Enter correct option")
 	}
