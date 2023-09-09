@@ -16,7 +16,6 @@ func main() {
 		fmt.Println("4. Exit")
 		fmt.Println("Enter choice: ")
 		fmt.Scan(&choice)
-		fmt.Println(choice)
 
 		switch choice {
 		case 1:
