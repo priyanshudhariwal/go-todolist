@@ -42,7 +42,11 @@ func view() {
 }
 
 func add() {
-
+	var todo string
+	fmt.Printf("Enter Todo: ")
+	fmt.Scanln(&todo)
+	todos = append(todos, todo)
+	fmt.Println("Successfully added.")
 }
 
 func del() {
