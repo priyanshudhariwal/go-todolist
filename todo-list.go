@@ -12,12 +12,12 @@ func main() {
 	var choice int
 
 	for {
-		fmt.Println("Choose option:")
+		fmt.Println("\nChoose option:")
 		fmt.Println("1. View Todos")
 		fmt.Println("2. Add Todo")
 		fmt.Println("3. Delete Todo")
 		fmt.Println("4. Exit")
-		fmt.Println("Enter choice: ")
+		fmt.Printf("Enter choice: ")
 		fmt.Scan(&choice)
 
 		switch choice {
@@ -36,14 +36,15 @@ func main() {
 }
 
 func view() {
+	fmt.Println("\nCurrent Todos:")
 	for i, v := range todos {
-		fmt.Printf("%d. %s", i, v)
+		fmt.Printf("%d. %s\n", i, v)
 	}
 }
 
 func add() {
 	var todo string
-	fmt.Printf("Enter Todo: ")
+	fmt.Printf("\nEnter Todo: ")
 	fmt.Scanln(&todo)
 	todos = append(todos, todo)
 	fmt.Println("Successfully added.")
