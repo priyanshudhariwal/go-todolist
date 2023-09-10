@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+)
 
 var todos []string
 
@@ -25,7 +28,7 @@ func main() {
 		case 3:
 			del()
 		case 4:
-			//
+			os.Exit(0)
 		default:
 			fmt.Println("Enter correct option")
 		}
@@ -33,7 +36,9 @@ func main() {
 }
 
 func view() {
-
+	for i, v := range todos {
+		fmt.Printf("%d. %s", i, v)
+	}
 }
 
 func add() {
